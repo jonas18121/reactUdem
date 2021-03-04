@@ -29,4 +29,4 @@ En gros il va prendre des fichier type `.png, .jpg, .sass, .cjs, .js`, il va les
 https://babeljs.io/
 
 Babel est un transpileur, il va prendre du javascrit nouvel génération à partir de 2015, ES6,
-et ça va aussi le rendre lisible par tous les navigateur
+et ça va aussi le rendre lisible par tous les navigateurs
