@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TitreCC from './components/TitreComponentClass';
-import TitreCF from './components/TitreComponentFunction';
+import TitreCC from './components/titre/TitreComponentClass';
+import TitreCF from './components/titre/TitreComponentFunction';
 
 class App extends Component {
 
