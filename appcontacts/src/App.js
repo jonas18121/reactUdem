@@ -11,7 +11,11 @@ class App extends Component {
 
         return (
             <div className="App">
-              <Titre />
+              <Titre nom='Hugo' />
+              <Titre nom='Jules' >
+                Ok, ça marche
+              </Titre>
+              <Titre nom='Eva' />
             </div>
         );
         
