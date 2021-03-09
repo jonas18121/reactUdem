@@ -5,7 +5,12 @@ class Titre extends Component {
 
     render(){
         return (
-            <h1>Notre titre depuis un autre composant. </h1>
+
+            <div>
+                <h1>Notre titre depuis un autre composant. </h1>
+                {this.props.nom} <br />
+                {this.props.children}
+            </div>
         )
     }
 }
