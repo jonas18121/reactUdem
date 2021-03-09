@@ -3,19 +3,22 @@ import Titre from './components/Titre';
 
 class App extends Component {
 
-    presentation = () => {
-        return 'Hello world';
+    state = {
+
+        nom1: 'Hugo',
+        nom2: 'Jules',
+        nom3: 'Eva'
     }
 
     render() {
 
         return (
             <div className="App">
-              <Titre nom='Hugo' />
-              <Titre nom='Jules' >
+              <Titre nom={this.state.nom1} />
+              <Titre nom={this.state.nom2} >
                 Ok, ça marche
               </Titre>
-              <Titre nom='Eva' />
+              <Titre nom={this.state.nom2} />
             </div>
         );
         
