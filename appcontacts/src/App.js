@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Titre from './components/Titre';
+import TitreCC from './components/TitreComponentClass';
+import TitreCF from './components/TitreComponentFunction';
 
 class App extends Component {
 
@@ -14,11 +15,22 @@ class App extends Component {
 
         return (
             <div className="App">
-              <Titre nom={this.state.nom1} />
-              <Titre nom={this.state.nom2} >
-                Ok, ça marche
-              </Titre>
-              <Titre nom={this.state.nom2} />
+
+                <div className="composant_type_classe">
+                    <TitreCC nom={this.state.nom1} />
+                    <TitreCC nom={this.state.nom2} >
+                    Ok, ça marche
+                    </TitreCC>
+                    <TitreCC nom={this.state.nom2} />
+                </div>
+
+                <div className="composant_type_function">
+                    <TitreCF nom={this.state.nom1} />
+                    <TitreCF nom={this.state.nom2} >
+                    Ok, ça marche
+                    </TitreCF>
+                    <TitreCF nom={this.state.nom2} />
+                </div>
             </div>
         );
         
