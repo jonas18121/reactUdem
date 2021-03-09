@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Titre from './components/Titre';
 
 class App extends Component {
 
@@ -10,13 +11,12 @@ class App extends Component {
 
         return (
             <div className="App">
-              <h1>Notre Composant</h1>
-              { this.presentation() }
+              <Titre />
             </div>
-          );
+        );
         
-      }
     }
+}
 
 export default App;
 
