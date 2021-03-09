@@ -1,5 +1,7 @@
 # Introduction aux composants et à JSX
 
+`import React from 'react';` veut dire qu'on va utiliser du JSX
+
 Il y a 2 types de composant
 
 - des composants de type classe
