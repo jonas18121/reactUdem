@@ -1,7 +1,9 @@
 import React from 'react';
 import Proptypes from 'prop-types';
+import './Titre.css'
 
 function TitreCF(props) {
+    
     return (
 
         <div>
