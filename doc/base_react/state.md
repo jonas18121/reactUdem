@@ -3,7 +3,7 @@
 ## Qu'est ce que state
 
 L'objet `state` sert à rendre un composant dynamique, il pourra échanger avec les autres composants.
-Il va pouvoir mettre à jours les données qui sont propre a ce composant.
+Il va pouvoir mettre à jours les données qui sont propre à ce composant.
 
 Chaque composant de type classe, peut avoir un objet `state` avec des données qui leurs sont propre.
 

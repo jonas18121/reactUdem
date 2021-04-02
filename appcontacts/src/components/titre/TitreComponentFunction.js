@@ -8,6 +8,7 @@ function TitreCF(props) {
 
         <div>
             <h1>Bonjour je m'appelle {props.nom}</h1>
+            <p class='text-primary'>mon texte</p>
         </div>
     )
 }

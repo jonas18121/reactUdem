@@ -7,3 +7,7 @@ Dupliquer une ligne
 Ouvrir le terminale
 
     > Ctrl + la touche ù qui est aussi %
+
+commentaire 
+
+    > Ctrl + k + u
