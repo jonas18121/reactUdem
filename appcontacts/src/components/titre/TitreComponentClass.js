@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './Titre.css'
 
 class Titre extends Component {
 
