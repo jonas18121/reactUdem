@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TitreCC from './components/titre/TitreComponentClass';
 import TitreCF from './components/titre/TitreComponentFunction';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 
