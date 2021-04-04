@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header/Header'
-import Contact from './components/contact/Contact'
+import ListeContact from './components/contact/ListeContact'
 
 class App extends Component {
-
 
     render() {
 
@@ -13,9 +12,7 @@ class App extends Component {
                 <Header />
 
                 <div className='container'>
-                    <Contact />
-                    <Contact />
-                    <Contact />
+                    <ListeContact />
                 </div>
             </div>
         );
