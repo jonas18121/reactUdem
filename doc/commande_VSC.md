@@ -11,3 +11,7 @@ Ouvrir le terminale
 commentaire 
 
     > Ctrl + k + u
+
+exention VSC pour creer rapidement des composants
+
+    > ES7 React/Redux/GraphQL/React-Native snippets
