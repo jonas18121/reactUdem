@@ -106,7 +106,7 @@ Dans `ListeContact.js`
         }
     }
 
-L'objet `state` aura toutes les données qu'il il aura dans nos contacts
+L'objet `state` aura toutes les données qu'il y aura dans nos contacts
 
 La méthode map() qui est dans this.state.contacts.map() , permet de retourner les 3 objets (avec leurs propriétés) qui sont dans this.state.contacts 
 
@@ -152,7 +152,7 @@ Dans `Contact.js` avec les props
     export default class Contact extends Component {
         render() {
             return (
-                <div className='card card-body mb-3' >
+                <div className='card card-body mb-3 text-center' >
 
                     <h4>{this.props.nom}</h4>
 
