@@ -9,19 +9,19 @@ export default class ListeContact extends Component {
                 id : 1,
                 nom : 'Jhon Doe',
                 email : 'jhon@gmail.com',
-                tel : 555-555-555
+                tel : "555-555-555"
             },
             {
                 id : 2,
-                nom : 'Jhon Doe',
+                nom : 'Jhonna Doe',
                 email : 'jhon@gmail.com',
-                tel : 555-555-555
+                tel : "555-555-555"
             },
             {
                 id : 3,
-                nom : 'Jhon Doe',
+                nom : 'Jhonny Doe',
                 email : 'jhon@gmail.com',
-                tel : 555-555-555
+                tel : "555-555-555"
             }
         ]
     }
