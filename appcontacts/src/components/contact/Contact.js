@@ -6,6 +6,8 @@ export default class Contact extends Component {
         show : true
     }
 
+    supprimeContact = () => this.props.supprimeClick();
+
     montrerContact = () => {
         this.setState({
             show : !this.state.show
@@ -18,12 +20,22 @@ export default class Contact extends Component {
 
                 <h4>
                     {this.props.nom}&nbsp; 
+
                     <i 
                         className="fas fa-sort-down" 
                         onClick={this.montrerContact} 
                         style={{ cursor: 'pointer' }}
-                    >
-                    </i>
+                    ></i>
+
+                    <i 
+                        className="fas fa-times"
+                        style={{
+                            cursor: 'pointer',
+                            float: 'right',
+                            color: 'red'
+                        }}
+                        onClick={this.supprimeContact}
+                    ></i>
                 </h4>
 
                 { 
