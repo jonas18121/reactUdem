@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header() {
     return (
-        <div>
+        <React.Fragment>
             <nav className="navbar navbar-dark bg-primary mb-3 py-0">
                 <div className='container'>
                     <a href='/' className='navbar-brand'>AppContacts</a>
@@ -14,6 +14,6 @@ export default function Header() {
                     </ul>
                 </div>
             </nav>
-        </div>
+        </React.Fragment>
     )
 }
