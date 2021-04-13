@@ -3,8 +3,28 @@ import React, { Component } from 'react'
 export default class Todo extends Component {
 
     state = {
-        element: ''
+        element: '',
+        items : []
     }
+
+    onChange = (e) => {
+
+        this.setState({
+
+            [e.target.name] : e.target.value
+        });
+    }
+
+    onSubmit = (e) => {
+
+        e.preventDefault();
+
+        this.setState({
+            element : '',
+            items: [...this.state.items, {element : this.state.element}]
+        });
+    }
+    
     render() {
         return (
             <div className="card my-3">
