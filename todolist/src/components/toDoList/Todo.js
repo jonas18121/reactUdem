@@ -25,6 +25,15 @@ export default class Todo extends Component {
         });
     }
 
+    deleteItem = (index) => {
+
+        const tabItem = this.state.items;
+        tabItem.splice(index, 1);
+        this.setState({
+            items: tabItem
+        });
+    }
+
     renderToDo = () => {
 
         return this.state.items.map((item, index) => {
@@ -44,6 +53,7 @@ export default class Todo extends Component {
                                         color:'red'
                                     }
                                 }
+                                onClick={() => this.deleteItem(index)}
                             ></i>
 
                         </h4>
