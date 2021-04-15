@@ -126,3 +126,7 @@ Si, on lécrit comme onSubmit={this.onSubmit} ou onChange={this.onChange}, ça n
 Quand on veut faire passé des paramètres dans une méthode, il faut le mettre dans une fonction fléché () => {}
 
     onClick={() => this.deleteItem(index)}
+
+si, on a pas besoin de paramètre on passe juste la référence sans fonction fléché
+
+    onChange={this.onChange}
