@@ -37,7 +37,13 @@ export default class Todo extends Component {
 
                             <i 
                                 className="fas fa-times"
-                                style={{ cursor: 'pointer', float: 'right', color:'red'}}
+                                style={
+                                    { 
+                                        cursor: 'pointer', 
+                                        float: 'right', 
+                                        color:'red'
+                                    }
+                                }
                             ></i>
 
                         </h4>
