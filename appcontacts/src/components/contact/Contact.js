@@ -6,7 +6,9 @@ export default class Contact extends Component {
         show : true
     }
 
-    supprimeContact = () => this.props.supprimeClick();
+    supprimeContact = () => {
+
+    }
 
     montrerContact = () => {
         this.setState({
@@ -42,12 +44,15 @@ export default class Contact extends Component {
                     this.state.show ? (
 
                         <ul className="card card-body mb-3">
+
                             <li className='list-group-item'>
                                 Email : {this.props.email}
                             </li>
+
                             <li className='list-group-item'>
                                 Téléphone : {this.props.tel}
                             </li>
+
                         </ul>
 
                     ) : null
