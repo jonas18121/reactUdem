@@ -7,8 +7,8 @@ export default class Contact extends Component {
         show : true
     }
 
-    supprimeContact = () => {
-
+    supprimeContact = (id, dispatch) => {
+        dispatch({ type: 'DELETE_CONTACT', payload: id });
     }
 
     montrerContact = () => {
@@ -42,7 +42,7 @@ export default class Contact extends Component {
                                         float: 'right',
                                         color: 'red'
                                     }}
-                                    onClick={this.supprimeContact}
+                                    onClick={ () => this.supprimeContact(this.props.id, value.dispatch) }
                                 ></i>
                             </h4>
 
@@ -60,7 +60,7 @@ export default class Contact extends Component {
                                         </li>
 
                                     </ul>
-                                    
+
                                 ) : null
                             }
                         </div>
