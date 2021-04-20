@@ -4,18 +4,10 @@ import { Consumer } from '../../context';
 
 export default class ListeContact extends Component {
 
-    supprime = (id) => {
-
-        const newContacts = this.state.contacts.filter(contact => contact.id !== id);
-
-        this.setState({
-            contacts : newContacts
-        });
-    }
-
     render() {
 
         return (
+
             <Consumer>
                 {value => {
                     return (
@@ -26,7 +18,6 @@ export default class ListeContact extends Component {
                                     nom={contact.nom}
                                     email={contact.email}
                                     tel={contact.tel}
-                                    supprimeClick={() => this.supprime(contact.id)}
                                 />
                             ))}
                         </React.Fragment>
