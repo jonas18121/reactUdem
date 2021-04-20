@@ -15,6 +15,7 @@ export default class ListeContact extends Component {
                             {value.contacts.map(contact => (
                                 <Contact 
                                     key={contact.id}
+                                    id={contact.id}
                                     nom={contact.nom}
                                     email={contact.email}
                                     tel={contact.tel}

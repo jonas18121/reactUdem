@@ -38,7 +38,7 @@ export class Provider extends Component {
                 tel : "555-555-555"
             }
         ],
-        dispatch: action => {
+        dispatch : action => {
             this.setState(state => reducer(state, action));
         }
     }
