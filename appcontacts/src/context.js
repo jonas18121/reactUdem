@@ -11,7 +11,7 @@ const reducer = (state, action) => {
             }
             
         default:
-            break;
+            return state;
     }
 }
 
@@ -37,7 +37,10 @@ export class Provider extends Component {
                 email : 'jhon@gmail.com',
                 tel : "555-555-555"
             }
-        ]
+        ],
+        dispatch: action => {
+            this.setState(state => reducer(state, action));
+        }
     }
 
     render() {
