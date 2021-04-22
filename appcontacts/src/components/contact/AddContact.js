@@ -7,6 +7,7 @@ export default class AddContact extends Component {
         email : '',
         tel : ''
     }
+    
     render() {
         return (
             <div className="card mb-3">
