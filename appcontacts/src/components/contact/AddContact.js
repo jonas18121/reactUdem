@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Consumer} from '../../context';
+import { v4 as uuidv4 } from 'uuid';
 
 export default class AddContact extends Component {
 
@@ -11,9 +12,26 @@ export default class AddContact extends Component {
 
     onChange = e => this.setState({ [e.target.name] : e.target.value });
 
-    onSubmit = e => {
+    onSubmit = (dispath, e) => {
         e.preventDefault();
-        console.log(this.state);
+        
+        const newContact = { 
+            id : uuidv4(),
+            nom : this.state.nom,
+            email : this.state.email,
+            tel : this.state.tel 
+        }
+
+        dispath({ type : 'ADD_CONTACT', payload : newContact });
+
+        // remettre a 0
+        this.setState({
+            nom : '',
+            email : '',
+            tel : ''
+        });
+
+
     }
 
     render() {
@@ -29,7 +47,7 @@ export default class AddContact extends Component {
                 
                                 <div className="card-body" >
                 
-                                    <form onSubmit={this.onSubmit}>
+                                    <form onSubmit={this.onSubmit.bind(this, value.dispatch)}>
                 
                                         <div className="form-group">
                                             <label htmlFor="nom">Nom</label>
