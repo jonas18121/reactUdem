@@ -7,7 +7,14 @@ export default class AddContact extends Component {
         email : '',
         tel : ''
     }
-    
+
+    onChange = e => this.setState({ [e.target.name] : e.target.value });
+
+    onSubmit = e => {
+        e.preventDefault();
+        console.log(this.state);
+    }
+
     render() {
         return (
             <div className="card mb-3">
@@ -15,7 +22,7 @@ export default class AddContact extends Component {
 
                 <div className="card-body" >
 
-                    <form>
+                    <form onSubmit={this.onSubmit}>
 
                         <div className="form-group">
                             <label htmlFor="nom">Nom</label>
