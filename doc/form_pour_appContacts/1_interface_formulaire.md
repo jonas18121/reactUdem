@@ -7,6 +7,8 @@ Dans `contact/AddContact.js`
 - On crée un state
 - On crée notre formulaire, la propriété `value` va permettre d'écrire dans `state.nom` puis on va etre a l'écoute sur l'évènnement `onChange`
 
+Dans `contact/AddContact.js`
+
     import React, { Component } from 'react'
 
     export default class AddContact extends Component {

@@ -85,6 +85,8 @@ Dans `Contact.js`
 
 - On va supprimer le contenu qui est dans la méthode `supprimeContact()`
 
+Dans `Contact.js`
+
 import React, { Component } from 'react'
 
     export default class Contact extends Component {
@@ -155,6 +157,8 @@ Dans `context.js`
 - on va créer un `reducer`, le `reducer` va contenir nos actions, par exemple supprimer un contact
 - `Dans le switch du reducer, on va créer nos différents type d'action`
 - `action.payload` , ça correspond à l'élément sur lequel on va cliquer dessus
+
+Dans `context.js`
 
     import React, {Component} from 'react';
 

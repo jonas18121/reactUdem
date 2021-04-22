@@ -4,6 +4,8 @@ Dans `ListContact.js`
 
 - On va `ajouter une propriété id au composant Contact`, la propriété id est pareil que la propriété key, mais `c'est mieux de passé par une propriété id` 
 
+Dans `ListContact.js`
+
     import React, { Component } from 'react';
     import Contact from './Contact';
     import { Consumer } from '../../context';
@@ -44,6 +46,8 @@ Dans `Contact.js`
 - Dans la méthode `supprimeContact(id, dispatch)` ,  on va utiliser la méthode `state.dispatch()` et dedans :
     - on va mettre le `type d'action` qu'on veut qu'il passe à la méthode `reducer()`, ici c'est `'DELETE_CONTACT'` pour supprimer un contact
     - et le `payload` qui va nous permettre de faire la `comparaison d'id dans la méthode reducer() `  
+
+Dans `Contact.js`
 
     import React, { Component } from 'react';
     import { Consumer } from '../../context';

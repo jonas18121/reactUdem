@@ -8,6 +8,8 @@ Dans `contact/AddContact.js`
     - `[e.target.name] ` va selectionné chacun des propriété `name` qu'il y a dans chaque `input`
     - `e.target.value` va selectionné chacun des propriété `value` qu'il y a dans chaque `input`
 
+Dans `contact/AddContact.js`
+
     import React, { Component } from 'react'
 
     export default class AddContact extends Component {
