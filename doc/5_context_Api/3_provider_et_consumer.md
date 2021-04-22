@@ -5,6 +5,8 @@ Dans `App.js`,
 - On va importer la classe Provider
 - On va entourer toute notre application avec le composant `<Provider> ` afin que tout ses enfant puisse accéder a son `state`
 
+Dans `App.js`,
+
     import React, { Component } from 'react';
     import 'bootstrap/dist/css/bootstrap.min.css';
     import Header from './components/header/Header';
@@ -37,7 +39,6 @@ Dans `ListeContact.js`
 
 - On va importer le `comsumer` pour utiliser le `context`
 - on crée un premier return `return ( <Consumer> {value => {` qui va entourer le deuxième return. Le premier return contient le `consumer` avec le paramètre `value` on va l'utiliser a la place de `this.state` dans le deuxième return
-
 
 Avant : 
 
