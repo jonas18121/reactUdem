@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Consumer } from '../../context';
 
 export default class Contact extends Component {
 
@@ -6,7 +7,9 @@ export default class Contact extends Component {
         show : true
     }
 
-    supprimeContact = () => this.props.supprimeClick();
+    supprimeContact = (id, dispatch) => {
+        dispatch({ type: 'DELETE_CONTACT', payload: id });
+    }
 
     montrerContact = () => {
         this.setState({
@@ -15,45 +18,55 @@ export default class Contact extends Component {
     }
 
     render() {
+
         return (
-            <div className='card card-body mb-3 text-center'>
+            <Consumer>
+                {value => {
 
-                <h4>
-                    {this.props.nom}&nbsp; 
+                    return (
+                        <div className='card card-body mb-3 text-center'>
 
-                    <i 
-                        className="fas fa-sort-down" 
-                        onClick={this.montrerContact} 
-                        style={{ cursor: 'pointer' }}
-                    ></i>
+                            <h4>
+                                {this.props.nom}&nbsp; 
 
-                    <i 
-                        className="fas fa-times"
-                        style={{
-                            cursor: 'pointer',
-                            float: 'right',
-                            color: 'red'
-                        }}
-                        onClick={this.supprimeContact}
-                    ></i>
-                </h4>
+                                <i 
+                                    className="fas fa-sort-down" 
+                                    onClick={this.montrerContact} 
+                                    style={{ cursor: 'pointer' }}
+                                ></i>
 
-                { 
-                    this.state.show ? (
+                                <i 
+                                    className="fas fa-times"
+                                    style={{
+                                        cursor: 'pointer',
+                                        float: 'right',
+                                        color: 'red'
+                                    }}
+                                    onClick={ () => this.supprimeContact(this.props.id, value.dispatch) }
+                                ></i>
+                            </h4>
 
-                        <ul className="card card-body mb-3">
-                            <li className='list-group-item'>
-                                Email : {this.props.email}
-                            </li>
-                            <li className='list-group-item'>
-                                Téléphone : {this.props.tel}
-                            </li>
-                        </ul>
+                            { 
+                                this.state.show ? (
 
-                    ) : null
-                }
-                
-            </div>
-        )
+                                    <ul className="card card-body mb-3">
+
+                                        <li className='list-group-item'>
+                                            Email : {this.props.email}
+                                        </li>
+
+                                        <li className='list-group-item'>
+                                            Téléphone : {this.props.tel}
+                                        </li>
+
+                                    </ul>
+
+                                ) : null
+                            }
+                        </div>
+                    )
+                }}
+            </Consumer>
+        );
     }
 }
