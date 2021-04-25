@@ -66,6 +66,8 @@ Dans `Contact.js`
 
 - On va entourer le `return` (qui est dans le render() de `Contact.js`) d'un `<Consumer>` afin de pouvoir utiliser la méthode `dispatch()`
 
+Dans `Contact.js`
+
     import React, { Component } from 'react';
     import { Consumer } from '../../context';
 

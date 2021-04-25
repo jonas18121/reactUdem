@@ -4,7 +4,7 @@ import { Consumer } from '../../context';
 export default class Contact extends Component {
 
     state = {
-        show : true
+        show : false
     }
 
     supprimeContact = (id, dispatch) => {
