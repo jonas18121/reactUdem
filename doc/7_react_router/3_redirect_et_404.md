@@ -137,11 +137,12 @@ Dans `App.js`
 - On import `Switch depuis 'react-router-dom'`
 
     - On va mettre toutes les balises `Route` dans la balise `Switch`
-    
+
     - La balise `Switch` va nous permettre d'afficher notre page d'erreur, si on veut accéder à une `URL` qui ne matche pas avec ceux qu'on a mis dans les balises `Route`
 
-- `<Route component={Erreur}/>` pour permettre `Switch` d'accéder a notre page d'erreur
+- `<Route component={Erreur}/>` pour permettre à `Switch` d'accéder a notre page d'erreur
 
+Dans `App.js`
 
     import React, { Component } from 'react';
     import 'bootstrap/dist/css/bootstrap.min.css';
