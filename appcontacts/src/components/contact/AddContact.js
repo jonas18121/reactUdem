@@ -31,7 +31,8 @@ export default class AddContact extends Component {
             tel : ''
         });
 
-
+        // redirect
+        this.props.history.push('./');
     }
 
     render() {

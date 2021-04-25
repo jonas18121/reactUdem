@@ -4,8 +4,9 @@ import Header from './components/header/Header';
 import ListeContact from './components/contact/ListeContact';
 import { Provider } from './context';
 import AddContact from './components/contact/AddContact';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import APropos from './components/page/APropos';
+import Erreur from './components/page/Erreur';
 
 
 class App extends Component {
@@ -21,10 +22,14 @@ class App extends Component {
                         <Header />
 
                         <div className='container'>
-                            <Route exact path="/listeContact" component={ListeContact} />
-                            <Route exact path="/" component={ListeContact} />
-                            <Route exact path="/ajouteContact" component={AddContact} />
-                            <Route exact path="/apropos" component={APropos} />
+
+                            <Switch>
+                                <Route exact path="/listeContact" component={ListeContact} />
+                                <Route exact path="/" component={ListeContact} />
+                                <Route exact path="/ajouteContact" component={AddContact} />
+                                <Route exact path="/apropos" component={APropos} />
+                                <Route component={Erreur}/>
+                            </Switch>
                         </div>
                     </div>
                 </Router>
