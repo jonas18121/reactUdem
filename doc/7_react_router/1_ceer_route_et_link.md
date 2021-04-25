@@ -23,6 +23,7 @@ Dans `App.js`
 - On entoure notre code dans les balises `<Router></Router>`
 
     - dedans on pourra lister nos différentes page. 
+
     - Pas besoin de mettre `<Provider>` dans `<Router></Router>`
 
 - `<Route exact path="/listeContact" component={ListeContact} />` , c'est la route de notre page liste de contact. 
@@ -71,6 +72,7 @@ Dans `Header.js`
 - `<Link to='/listeContact' className='nav-link'>Accueil</Link>` , c'est sur ce lien que le user cliquera pour accéder à la page `Accueil`
 
     - La balise `<Link>` représente une balise `<a>`
+    
     - La propriété `to=` représente une propriété `href=`
 
 
