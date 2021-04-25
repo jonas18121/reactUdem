@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -9,7 +10,7 @@ export default function Header() {
 
                     <ul className='navbar-nav'>
                         <li className='nav-item ml-auto'>
-                            <a href='/' className='nav-link'>Acceuil</a>
+                            <Link to='/listeContact' className='nav-link'>Accueil</Link>
                         </li>
                     </ul>
                 </div>

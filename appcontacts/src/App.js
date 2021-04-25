@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import ListeContact from './components/contact/ListeContact';
 import { Provider } from './context';
 import AddContact from './components/contact/AddContact';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 class App extends Component {
@@ -13,15 +14,17 @@ class App extends Component {
         return (
 
             <Provider>
-                <div className="App">
+                <Router>
 
-                    <Header />
+                    <div className="App">
+                        <Header />
 
-                    <div className='container'>
-                        <AddContact />
-                        <ListeContact />
+                        <div className='container'>
+                            <AddContact />
+                            <Route exact path="/listeContact" component={ListeContact} />
+                        </div>
                     </div>
-                </div>
+                </Router>
             </Provider>
         ); 
     }
