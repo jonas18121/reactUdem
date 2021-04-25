@@ -3,7 +3,9 @@
 Dans `App.js`
 
 - `<Route exact path="/" component={ListeContact} />`, On rajoute cette ligne qui va permettre d'afficher la liste des contact lorsqu'on ouvre notre application
+
 - `<Route exact path="/ajouteContact" component={AddContact} />` , pour accéder à la page `Ajouter un Contact`
+
 - `<Route exact path="/apropos" component={APropos} />` , pour accéder à la page `A propos`
 
 Dans `App.js`
@@ -49,8 +51,11 @@ Dans `App.js`
 Dans `Header.js`
 
 - On met la balise `link` pour `Ajouter un Contact` et un autre pour `A propos`
+
 - en bootstrap 
+
     - d-inline-block = display : inline-block
+
     - mr-2 = margin-rigth de force 2
 
 Dans `Header.js`
