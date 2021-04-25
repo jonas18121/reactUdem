@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header/Header';
 import ListeContact from './components/contact/ListeContact';
 import { Provider } from './context';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
 
@@ -10,13 +11,16 @@ class App extends Component {
 
         return (
             <Provider>
-                <div className="App">
-                    <Header />
+                <Router>
 
-                    <div className='container'>
-                        <ListeContact />
+                    <div className="App">
+                        <Header />
+
+                        <div className='container'>
+                            <Route exact path="/listeContact" component={ListeContact} />
+                        </div>
                     </div>
-                </div>
+                </Router>
             </Provider>
         ); 
     }
