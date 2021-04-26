@@ -3,6 +3,14 @@ import { Consumer } from '../../context';
 
 export default class Contact extends Component {
 
+    componentDidMount(){
+        console.log('componentDidMount() est appelé après que tous les composant soit bien charger par le render()');
+    }
+
+    componentDidUpdate(){
+        console.log('componentDidUpdate() est appelé après que le composant est bien mise à jour (modifier), exemple suppression ou ajout d\'un contact.');
+    }
+
     state = {
         show : false
     }
