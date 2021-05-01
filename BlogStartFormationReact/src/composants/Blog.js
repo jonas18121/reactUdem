@@ -2,7 +2,18 @@ import React, { Component } from 'react'
 import NvPost from './NvPost/NvPost'
 import PostModale from './PostModale/PostModale'
 import './Blog.css'
+import axios from 'axios'
+
 class Blog extends Component {
+
+    componentDidMount(){
+
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+            .then(reponse => {
+                console.log(reponse);
+            })
+        ;  
+    }
 
     render () {
 
