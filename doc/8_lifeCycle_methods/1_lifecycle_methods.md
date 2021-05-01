@@ -44,7 +44,7 @@ Un composant n'a qu'une seule méthode de cycle de vie lors de la phase de démo
 
 - 3) - componentDidMount() : 
 
-    - Cette méthode de cycle de vie est appelé lorsque le composant est appelé, c'est-à-dire lorsque le composant parent, ainsi que les composants enfants sont tous traité et près a etre affiché.
+    - Cette méthode de cycle de vie est appelé lorsque le composant est appelé, c'est-à-dire lorsque le composant parent, ainsi que les composants enfants sont tous traité et près à etre affiché.
 
 - 4) - shouldComponentUpdate(nextProps, nextState) :
 
