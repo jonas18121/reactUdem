@@ -8,7 +8,8 @@ import Post from './Post/Post'
 class Blog extends Component {
 
     state = {
-        posts : []
+        posts : [],
+        selectPostId : null
     }
 
     componentDidMount(){
@@ -28,15 +29,22 @@ class Blog extends Component {
 
                 console.log(postAuteur); 
 
-                this.setState({ posts : postAuteur});
+                this.setState({ posts : postAuteur });
             })
         ;  
     }
 
+    selectId = id => this.setState({ selectPostId: id })
+
     render () {
 
         const post = this.state.posts.map(post => {
-            return <Post key={post.id} auteur={post.auteur} titre={post.title} />
+            return <Post 
+                key={post.id} 
+                auteur={post.auteur} 
+                titre={post.title} 
+                clicked ={ () => this.selectId(post.id) }
+            />
         })
 
         return (
@@ -44,8 +52,11 @@ class Blog extends Component {
                 <section>
                 <NvPost />
                 </section>
+
                 <h2 className="text-center my-5">Choisissez un post ...</h2>
-                <PostModale />
+
+                <PostModale id={this.state.selectPostId} />
+
                 <section className="Posts">
                     {post}
                 </section>
