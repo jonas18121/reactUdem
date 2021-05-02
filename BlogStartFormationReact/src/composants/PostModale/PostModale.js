@@ -7,6 +7,9 @@ class PostModale extends Component {
     render () {
 
         return (
+
+            this.props.id ?
+            
                 <div className="PostComplet">
                     
                     <h1>Titre</h1>
@@ -15,8 +18,10 @@ class PostModale extends Component {
                     <button className="btn btn-danger my-3 btnPost">Fermer</button>
                 
                 </div>
-            
-            )
+            : 
+                null
+
+        )
         
     
     }
