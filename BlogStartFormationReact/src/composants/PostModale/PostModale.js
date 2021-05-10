@@ -1,8 +1,21 @@
-import React, { Component } from 'react'
-
-import './PostModale.css'
+import React, { Component } from 'react';
+import axios from 'axios';
+import './PostModale.css';
 
 class PostModale extends Component {
+
+    componentDidUpdate()
+    {
+        if(this.props.id){
+            axios.get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
+                .then(
+                    response => {
+                        console.log(response);
+                    }
+                )
+            ;
+        }
+    }
 
     render () {
 
@@ -20,10 +33,7 @@ class PostModale extends Component {
                 </div>
             : 
                 null
-
         )
-        
-    
     }
 }
 
