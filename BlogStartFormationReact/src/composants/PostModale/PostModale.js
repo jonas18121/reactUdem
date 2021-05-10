@@ -4,13 +4,19 @@ import './PostModale.css';
 
 class PostModale extends Component {
 
+    state = {
+        loadedPost: null
+    }
+
     componentDidUpdate()
     {
         if(this.props.id){
             axios.get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
                 .then(
                     response => {
-                        console.log(response);
+                        this.setState({
+                            loadedPost : response.data
+                        });
                     }
                 )
             ;
@@ -21,12 +27,12 @@ class PostModale extends Component {
 
         return (
 
-            this.props.id ?
+            this.state.loadedPost ?
             
                 <div className="PostComplet">
                     
-                    <h1>Titre</h1>
-                    <p>Contenu</p>
+                    <h1>{this.state.loadedPost.title}</h1>
+                    <p>{this.state.loadedPost.body}</p>
             
                     <button className="btn btn-danger my-3 btnPost">Fermer</button>
                 
