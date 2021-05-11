@@ -11,15 +11,19 @@ class PostModale extends Component {
     componentDidUpdate()
     {
         if(this.props.id){
-            axios.get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
-                .then(
-                    response => {
-                        this.setState({
-                            loadedPost : response.data
-                        });
-                    }
-                )
-            ;
+
+            if (!this.state.loadedPost || (this.state.loadedPost && (this.props.id !== this.state.loadedPost.id) ) ) {
+                
+                axios.get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
+                    .then(
+                        response => {
+                            this.setState({
+                                loadedPost : response.data
+                            });
+                        }
+                    )
+                ;
+            }
         }
     }
 
