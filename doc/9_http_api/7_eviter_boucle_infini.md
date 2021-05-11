@@ -13,9 +13,9 @@ Le contenu qui est dans le render(), une fois qu'il est mis à jours va faire ap
 
 puis componentDidUpdate() va mettre a jours le contenu qui est dans le render().
 
-ainsi de suite , ça va faire une boucle infini.
+ainsi de suite , ça va faire une boucle infinie.
 
-Pour éviter la boucle infini on va mettre notre `axios.get()` dans une autre condition.
+Pour éviter la boucle infinie on va mettre notre `axios.get()` dans une autre condition.
 
 - if (!this.state.loadedPost || (this.state.loadedPost && (this.state.loadedPost.id !== this.props.id) ) )
 
