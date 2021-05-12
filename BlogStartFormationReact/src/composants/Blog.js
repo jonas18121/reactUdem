@@ -9,7 +9,8 @@ class Blog extends Component {
 
     state = {
         posts : [],
-        selectPostId : null
+        selectPostId : null,
+        toggle: false
     }
 
     componentDidMount(){
@@ -34,7 +35,23 @@ class Blog extends Component {
         ;  
     }
 
-    selectId = id => this.setState({ selectPostId: id })
+    /**
+     * S'active au clique sur l' article
+     */
+    selectId = id => {
+        this.setState({ 
+            selectPostId: id,
+            toggle: true
+        });
+        console.log(this.state);
+    }
+
+    /**
+     * S'active au clique sur le boutton fermer du modale
+     */
+    toggleModale = () => {
+        this.setState({ toggle: false })
+    }
 
     render () {
 
@@ -55,7 +72,11 @@ class Blog extends Component {
 
                 <h2 className="text-center my-5">Choisissez un post ...</h2>
 
-                <PostModale id={this.state.selectPostId} />
+                <PostModale 
+                    id={this.state.selectPostId} 
+                    cacheModale={this.toggleModale}
+                    toggle={this.state.toggle}
+                />
 
                 <section className="Posts">
                     {post}

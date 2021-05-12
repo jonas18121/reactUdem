@@ -31,14 +31,17 @@ class PostModale extends Component {
 
         return (
 
-            this.state.loadedPost ?
+            this.state.loadedPost && this.props.toggle ?
             
                 <div className="PostComplet">
                     
                     <h1>{this.state.loadedPost.title}</h1>
                     <p>{this.state.loadedPost.body}</p>
             
-                    <button className="btn btn-danger my-3 btnPost">Fermer</button>
+                    <button 
+                        className="btn btn-danger my-3 btnPost"
+                        onClick={this.props.cacheModale}
+                    >Fermer</button>
                 
                 </div>
             : 
