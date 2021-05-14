@@ -9,7 +9,7 @@ Dans `index.js`
 
 - Avec le composant `Provider`, on va entourer le composant `App`
 
-- On met notre constante `store`, dans la propriété `store` du composant `App`, afin d'Autoriser la constante `store` d'injecter le `state` vers des composants enfant du composant `App`
+- On met notre constante `store`, dans la propriété `store` du composant `Provider`, afin d'Autoriser la constante `store` d'injecter le `state` vers des composants enfant du composant `App`
 
 Dans `index.js`
 
@@ -23,7 +23,7 @@ Dans `index.js`
 
     const store = createStore(reducer);
 
-    ReactDOM.render(<Provider> <App store={store} /> </Provider>, document.getElementById('root'));
+    ReactDOM.render(<Provider store={store}> <App /> </Provider>, document.getElementById('root'));
    
 
 Dans `Compteur.js`
