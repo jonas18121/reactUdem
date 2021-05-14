@@ -1,9 +1,8 @@
-
-
 import React, { Component } from 'react'
 import './Compteur.css';
 import Resultat from '../Composants/Resultat/Resultat.js';
 import IncrBtn from '../Composants/IncrBtn/IncrBtn.js';
+import { connect } from 'react-redux';
 
 class Compteur extends Component {
 
@@ -39,4 +38,4 @@ class Compteur extends Component {
     }
 }
 
-export default Compteur;
+export default connect()(Compteur);
