@@ -1,30 +1,3 @@
-
-## Pour résoudre les problèmes qui ne nécessitent pas d'attention
-
-    > npm audit fix
-
-## Pour résoudre tous les problèmes (y compris les changements de rupture)
-
-    > npm audit fix --force
-
-
-## Installer redux 
-
-    > npm install redux
-
-## Installer react-redux 
-
-    > npm install react-redux
-
-
-
-
-
-
-
-
-
-
 # Mettre notre application en ligne
 
 Pour Mettre notre application en ligne, sur une page de Github
@@ -67,3 +40,8 @@ Dans `package.json`
             "test": "react-scripts test",
             "eject": "react-scripts eject"
         },
+
+
+
+    
+
