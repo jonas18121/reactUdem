@@ -4,6 +4,9 @@ export default function Contenu() {
 
     const [monState, setMonState] = useState(0);
 
+    const [dataImg, setDataImg] = useState();
+
+
     const ajouteState = () => {
         setMonState(monState + 1 );
     }
@@ -13,27 +16,32 @@ export default function Contenu() {
     }
 
     useEffect(() => {
-        console.log('composant affiché, sans 2èmes paramètres');
-        console.log('Le piège ces que si on met setMonState(monState + 1 ) dans cette fonction, ça va faire une boucle infini');
-    });
 
-    useEffect(() => {
-        console.log('appeller useEffect une seule fois au 1er affichage, c\'est tout');
-        console.log('Avec un tableau vide en 2èmes paramètres, c\'est comme un componentDidMount()');
+        const fetchData = async () => {
+            const reponse = await fetch('https://api.thecatapi.com/v1/images/search');
+
+            const data = await reponse.json();
+
+            // console.log(data);
+            setDataImg(data[0].url);
+        }
+
+        fetchData();
+
     }, []);
-
-    useEffect(() => {
-        console.log('appeller useEffect au début et une seulement lorsque le state va être modifier, pas de boucle infini');
-        console.log('Avec une le state dans le tableau en 2èmes paramètres, c\'est comme un componentDidUpdate()');
-    }, [monState]);
 
     return (
         <div>
+            <div>
+                <p>{monState}</p>
 
-            <p>{monState}</p>
+                <button onClick={retireState}>Click pour retirer - 1</button>
+                <button onClick={ajouteState}>Click pour ajouter + 1</button>
+            </div>
 
-            <button onClick={retireState}>Click pour retirer - 1</button>
-            <button onClick={ajouteState}>Click pour ajouter + 1</button>
+            <div>
+                <img src={dataImg} />
+            </div>
         </div>
     )
 }
