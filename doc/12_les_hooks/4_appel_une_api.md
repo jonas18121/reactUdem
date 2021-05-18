@@ -13,7 +13,7 @@ Dans `Contenu.js`
 
     - `await fetch('https://api.thecatapi.com/v1/images/search');`
 
-- Lorsqu'on a récupérer les données depuis l'api, on on les mets au format Json
+- Lorsqu'on a récupérer les données depuis l'api, on les mets au format Json
 
     - `const data = await reponse.json();`
 
