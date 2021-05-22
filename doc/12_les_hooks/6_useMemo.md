@@ -51,6 +51,8 @@ Dans `Contenu.js`
 
 Dans `Enfant.js` coder normalement
 
+Dans `Enfant.js` 
+
 import React from 'react'
 
 export default function Enfant() {
@@ -226,7 +228,7 @@ Dans `Contenu.js`
 
 Dans `Enfant.js` qui reçois en props un tableau avec `React.memo`
 
-- Même si on utilise le `useMemo`, il faut continué d'utiliser `React.memo` pour que les tableau passé en props ne remettent pas a jour le composant enfant, il n'en n'a pas besoin
+- Même si on utilise le `useMemo`dans `Contenu.js`, il faut continué d'utiliser `React.memo` pour que les tableaux passé en props ne remettent pas a jour le composant enfant, si il n'en n'a pas besoin
 
 Dans `Enfant.js`
 
