@@ -51,22 +51,21 @@ Dans `Contenu.js`
 
 Dans `Enfant.js` coder normalement
 
-Dans `Enfant.js` 
 
-import React from 'react'
+    import React from 'react'
 
-export default function Enfant() {
-    
-    console.log("Mise à jour du composant enfant");
+    export default function Enfant() {
+        
+        console.log("Mise à jour du composant enfant");
 
 
-    return (
+        return (
 
-        <div>
-            <h2> Le composant enfant</h2>
-        </div>
-    )
-}
+            <div>
+                <h2> Le composant enfant</h2>
+            </div>
+        )
+    }
 
 
 ## avec React.memo()
