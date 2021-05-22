@@ -1,11 +1,9 @@
-import React, { useState, useEffect }  from 'react'
+import React, { useState }  from 'react'
+import useCatImg from './useCatImg';
 
 export default function Contenu() {
 
     const [monState, setMonState] = useState(0);
-
-    const [dataImg, setDataImg] = useState();
-
 
     const ajouteState = () => {
         setMonState(monState + 1 );
@@ -15,20 +13,7 @@ export default function Contenu() {
         if(monState > 0 ) return setMonState(monState - 1 );
     }
 
-    useEffect(() => {
-
-        const fetchData = async () => {
-            const reponse = await fetch('https://api.thecatapi.com/v1/images/search');
-
-            const data = await reponse.json();
-
-            // console.log(data);
-            setDataImg(data[0].url);
-        }
-
-        fetchData();
-
-    }, []);
+    const catUrl = useCatImg();    
 
     return (
         <div>
@@ -40,7 +25,7 @@ export default function Contenu() {
             </div>
 
             <div>
-                <img src={dataImg} />
+                <img src={catUrl} />
             </div>
         </div>
     )
