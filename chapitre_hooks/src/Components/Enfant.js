@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Enfant = function ({ chaine }) {
+const Enfant = function (props) {
 
 
     console.log("Mise à jour du composant enfant");
@@ -9,7 +9,8 @@ const Enfant = function ({ chaine }) {
 
         <div>
             <h2> Le composant enfant</h2>
-            <p>{ chaine }</p>
+            <p>{ props.chaine }</p>
+            <button onClick={props.myFunc} >Click</button>
         </div>
     )
 }
