@@ -1,34 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import Modale from './Components/Modale';
 
 function App() {
-
-    const [toggleModale, setToggleModale] = useState(false);
-
-    const closeModale = () => setToggleModale(false);
-
-    const openModale = () => setToggleModale(true);
-
-    const stopPropa = (event) => event.stopPropagation();  
-
     
-    let myModale = '';
+    const [ position, setPosition ] = useState([0, 0]);
 
-    if (toggleModale) {
-        myModale = <Modale closeFunc={closeModale } stopPropa={stopPropa} />;    
+    const logMousePosition = e => {
+        console.log(e.clientX, e.clientY);
+
+        let arrayPosition = [];
+        arrayPosition[0] = e.clientX;
+        arrayPosition[1] = e.clientY;
+
+        setPosition(arrayPosition);
     }
-    else {
-        myModale = null;
-    }
-    
+
+    useEffect(() => {
+        window.addEventListener('mousemove', logMousePosition);
+
+        return () => {
+            window.removeEventListener('mousemove', logMousePosition);
+        }
+    }, []);
 
     return (
         <div className="App">
-
-            <button onClick={openModale} >Ouvrir la modale</button>
-
-            {myModale}
+            hello word
         </div>
     );
 }
