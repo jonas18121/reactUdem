@@ -21,7 +21,7 @@ Dans `Navbar.js`
 
     - `changeWidth` permet a `setLargeur(window.innerWidth);` de mettre la nouvelle taille de l'écran dans le state `largeur` 
 
-    - dans `changeWidth` : `if (window.innerWidth > 500) {setToggleMenu(false); }` va mettre le state `toggleMenu` sur false, afin qu'elle soit fermer lorsq'on sera a moins de 500 pixel
+    - dans `changeWidth` : `if (window.innerWidth > 500) {setToggleMenu(false); }` va mettre le state `toggleMenu` sur false, afin qu'elle soit fermer lorsq'on sera a plus de 500 pixel
 
     -  `return () => { window.removeEventListener('resize', changeWidth); }` c'est notre cleanup fonction , qui ne sera pas utile vu qu'on aura toujours besoin de notre navbar , elle ne va jamais disparaitre
 
