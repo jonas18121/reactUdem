@@ -21,7 +21,7 @@ Dans `Compteur.js`
 
 - On crée notre constante `initialState` de valeur 0 pour notre compteur
 
-- On la fonction `reducer(state, action)` :
+- Dans  la fonction `reducer(state, action)` :
 
     - `state` =  c'est l'etat du state, donc si on a mis  +1, le state sera a 1 et non a 0
 
