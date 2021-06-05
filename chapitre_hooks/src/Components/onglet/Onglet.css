@@ -1,9 +1,9 @@
 body {
-    height: 100vh;
+    /* height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f1f1f1;
+    background: #f1f1f1; */
 }
 
 .contBtn {
@@ -24,6 +24,7 @@ body {
 }
 
 .container {
+    margin: 0 auto;
     width: 502px;
     height: 600px;
     text-align: justify;
