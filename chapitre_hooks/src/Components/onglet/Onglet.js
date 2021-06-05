@@ -15,7 +15,7 @@ export default function Onglet() {
 
     return (
         <div>
-            <div className='constBtn'>
+            <div className='contBtn'>
 
                 <div 
                     onClick={goFrancais}
