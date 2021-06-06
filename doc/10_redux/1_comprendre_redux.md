@@ -1,5 +1,9 @@
 # Comprendre l'utilisation de Redux
 
+Site React Redux : https://react-redux.js.org/
+
+Site Redux : https://redux.js.org/introduction/getting-started
+
 1) On a un `composant` avec un `state` qu'on veut modifier
 
 2) Pour ne plus s'occuper du `state de ce composant` et avoir accès à ce `state` partout, on va connecter ce `composant` à un `STORE`
