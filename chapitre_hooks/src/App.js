@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Counter from './Components/counter/Counter'
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
 
     return (
         <div className="App">
-            hello world
+            <Counter />
         </div>
     );
 }
