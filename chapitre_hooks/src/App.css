@@ -9,3 +9,8 @@ body {
     height: 100vh;
     width: 100%;
 }
+
+input {
+    display: block;
+    margin: 100px auto;
+}
