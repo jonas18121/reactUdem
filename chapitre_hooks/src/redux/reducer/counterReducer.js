@@ -4,7 +4,21 @@ const INITIAL_STATE = {
 
 function counterReducer(state = INITIAL_STATE, action) {
 
-    return state;
+    switch (action.type) {
+        case 'INCREMENT':
+            return {
+                ...state,
+                count : state.count + 1
+            }
+        case 'DECREMENT':
+            return {
+                ...state,
+                count : state.count > 0 ? state.count - 1 : 0
+            }
+    
+        default:
+            return state;
+    }
 }
 
 export default counterReducer;
