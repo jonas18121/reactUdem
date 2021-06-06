@@ -2,11 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import counterReducer from './redux/reducer/counterReducer';
+import nameReducer from './redux/reducer/nameReducer';
 
-const store = createStore(counterReducer);
+const rootReducer = combineReducers({
+    counterReducer: counterReducer,
+    nameReducer: nameReducer
+});
+
+const store = createStore(rootReducer);
 
 
 
