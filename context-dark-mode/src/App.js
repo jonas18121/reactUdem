@@ -1,8 +1,16 @@
+import React from 'react';
+import Contenu from './Composants/Contenu/Contenu';
+import ThemeContextProvider from './Context/ThemeContext';
+
+
 
 function App() {
   return (
     <div className="App">
-      hello word
+
+      <ThemeContextProvider>
+          <Contenu />
+      </ThemeContextProvider>
     </div>
   );
 }
