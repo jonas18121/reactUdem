@@ -1,12 +1,12 @@
 # Premier contexte.
 
-Ici on va tester notre api contexte, on va juste passer des données atravers notre application
+Ici on va tester notre api contexte, on va juste passer des données à travers notre application
 
 ### Dans Contenu.js
 
 - On importe `React` depuis `react`
 
-- On importe `useContext` depuis `react` qui Accepte un objet contexte renvoie la valeur actuelle du contexte
+- On importe `useContext` depuis `react` qui Accepte un objet contexte et renvoie la valeur actuelle du contexte
 
 - On importe le css
 
@@ -16,7 +16,7 @@ Ici on va tester notre api contexte, on va juste passer des données atravers no
 
 - `const { theme } = useContext(ThemeContext);` On utilise `useContext` pour pouvroir prendre la constante `theme` qui est dans `ThemeContext`
 
-- `{theme}` c'est la constante qui vient depuis `ThemeContext`, et on peut l'utiliser ici car `Contenu()` est entourer par `<ThemeContextProvider>` dans `App.js`
+- `{theme}` c'est la constante qui vient depuis `ThemeContext`, et on peut l'utiliser ici car la fonction `Contenu()` est entourer par `<ThemeContextProvider>` dans `App.js`
 
 Dans `Contenu.js`
 
@@ -39,7 +39,7 @@ Dans `Contenu.js`
 
 ### Dans Contenu.css
 
-- On fiat notre css
+- On fait notre css
 
 Dans `Contenu.css`
 
@@ -54,9 +54,9 @@ Dans `Contenu.css`
 
 - On importe `Contenu.js`
 
-On importe le composant `ThemeContextProvider` depuis notre fichier `ThemeContextProvider.js` qu'on va créer, c' est depuis ce fichier qu'on va creer notre contexte
+- On importe le composant `ThemeContextProvider` depuis notre fichier `ThemeContext.js` qu'on va créer, c' est depuis ce fichier qu'on va creer notre contexte
 
-- On va entourer le composant `<Contenu />` avec le composant `<ThemeContextProvider>` afin `<Contenu />` puisse acceder au contexte
+- On va entourer le composant `<Contenu />` avec le composant `<ThemeContextProvider>` afin que `<Contenu />` puisse acceder au contexte
 
 Dans `App.js`
 
@@ -70,9 +70,9 @@ Dans `App.js`
     return (
         <div className="App">
 
-        <ThemeContextProvider>
-            <Contenu />
-        </ThemeContextProvider>
+            <ThemeContextProvider>
+                <Contenu />
+            </ThemeContextProvider>
         </div>
     );
     }
@@ -84,7 +84,7 @@ Dans `App.js`
 
 - On importe `React`, `createContext`, `useState ` depuis `react`
 
-- `createContext` va nous servir a creer un contexte `export const ThemeContext = createContext();`
+- `createContext` va nous servir a creer un contexte : `export const ThemeContext = createContext();`
 
 - `const [theme, setTheme] = useState('Hello World');`
 
