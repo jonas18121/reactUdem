@@ -216,11 +216,12 @@ Dans `Contenu.js`
 
 ### Dans Contenu.css
 
-- On fait nous css
+- On fait notre css
 
 - `vw` et `vh` site : https://riptutorial.com/css/example/17657/vh-and-vw
 
     - `vh`, qui signifie `viewport height` est relatif à 1% de la hauteur de la fenêtre
+    
     - `vw`, qui signifie `viewport width` est relatif à 1% de la largeur de la fenêtre
 
     exemple: 
