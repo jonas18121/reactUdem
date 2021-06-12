@@ -1,4 +1,4 @@
-# Utiliser l'extention emmet dans react
+# Utiliser l'extention emmet dans VSCode avec react
 
 - Dans Vs Code, on excute cette commande
 
