@@ -18,27 +18,27 @@ presentation2();
 
 
 
-// si on a qu'une chose a retourné , on le faire sur une ligne et enlevé les accolades
-presentation3 = () => console.log("hello word 3");
+// si on a qu'une chose a retourné , on peut le faire sur une ligne et enlevé les accolades
+const presentation3 = () => console.log("hello word 3");
 presentation3();
 
 
 
 // si on a qu'un paramètre, on peut enlevé les parenthèses
-presentation4 = nom => console.log("hello " + nom);
+const presentation4 = nom => console.log("hello " + nom);
 presentation4("jean");
 
 
 // si on a plusieurs paramètres, il faut ajouter les parenthèses
-presentation5 = (nom, age) => console.log("hello " + nom + " " + age + " ans");
+const presentation5 = (nom, age) => console.log("hello " + nom + " " + age + " ans");
 presentation5("jean", 25);
 
 
 // avec les batik
-presentation6 = nom => console.log(`hello mister ${nom}`);
+const presentation6 = nom => console.log(`hello mister ${nom}`);
 presentation6("jean");
 
-presentation7 = (nom, age) => console.log(`hello ${nom} ${age} ans`);
+const presentation7 = (nom, age) => console.log(`hello ${nom} ${age} ans`);
 presentation7("jean", 25);
 
 
