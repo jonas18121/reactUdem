@@ -48,13 +48,26 @@ variable_let();
 
 // CONST
 
-// on ne peut plus réassigner une variable
+// on ne peut plus réassigner une constante
 const nom = "Jean";
 
 // il y aura une erreur
-nom = "jul";
+// nom = "jul";
 
 console.log(nom);
+
+
+// par contre on peut réassigner les valeurs d'un objet qui est dans une constante
+// car c'est pas l'objet qu'on veut changer mais juste sa valeur
+
+const state = { name : "Jean"};
+
+state.name = "Jul";
+
+// si on veut changer l'objet, il y aura une erreur
+// state = { age : 19 }
+
+console.log(state);
 
 
 

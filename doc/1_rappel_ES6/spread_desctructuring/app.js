@@ -48,6 +48,45 @@ console.log(presentation); // return {nom: "Hugo", age: 35, email: "hugo@gmail.c
 
 
 
+// si dans une function on ne connait pas le nombre d'argument qu'un va lui passé, on utilise le rest operator
+// le rest operator, va nous fournir un tableau avec les argument qu'on va lui passé
+function add(...params) {
+    console.log(params);
+}
+
+add(1,2,3) // return (3) [1, 2, 3]
+
+// si on met 2 paramètres avant ...params, les 2 valeurs seront pour les 2 paramètres avant ...params
+// et le rest seront pour ...params
+function add(a,b,...params) {
+    console.log(params);
+}
+
+add(1,2,3,4,5,6,7) // return (5) [3, 4, 5, 6, 7]
+
+
+
+// ici on additionne les valeurs du tableau
+function add(...params) {
+    console.log(params);
+
+    let result = 0;
+
+    for (const param of params) {
+        result += param;
+    }
+
+    return result;
+}
+
+console.log(add(1,2,3)); // return 6
+
+
+
+
+
+
+
 console.log("Destructuring");
 
 // Destructuring
