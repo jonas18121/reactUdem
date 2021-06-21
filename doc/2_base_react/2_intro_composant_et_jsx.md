@@ -47,7 +47,7 @@ Dans le JSX :
     export default App;
 
 
-- Il faut fermer toute les balises qui son seul exemple
+- Il faut fermer toutes les balises qui son seul exemple
 
 En HTML :
 
@@ -55,7 +55,7 @@ En HTML :
     <hr>
     <input>
 
-Devien en JSX :
+Devient en JSX :
 
     <br />
     <hr />
@@ -125,9 +125,11 @@ On utilise les variable entre des accolades, on peut aussi faire des calcules en
 
             return (
                 <div className="App">
-                <h1>Notre Composant</h1>
-                {nom} <br />
-                { 1 + 1}
+                    <h1>Notre Composant</h1>
+                    {nom} <br />
+                    { 1 + 1}
+
+                    {true ? 1111 : 2222}
                 </div>
             );
             
@@ -157,3 +159,41 @@ On utilise les variable entre des accolades, on peut aussi faire des calcules en
         }
 
     export default App;
+
+
+## Utiliser emmet dans le JSX
+
+Aller dans ces onglets de VSCode File => Preferences => Settings => Extensions => Emmet => Edit in settings.json
+
+ou 
+
+    > Ctrl + Maj + p , 
+
+puis on écrit dans la barre de recherche 
+
+    > Open Settings (JSON)
+
+dans settings.json, on a just a mettre ce qui est en dessous
+
+    "emmet.includeLanguages": {
+        "javascript" : "javascriptreact"
+    },
+
+
+
+Dans `settings.json`
+
+
+    {
+        "editor.suggestSelection": "first",
+        "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+        "editor.codeActionsOnSave": null,
+        "emmet.includeLanguages": {
+            "javascript" : "javascriptreact"
+        },
+        "files.autoSave": "afterDelay",
+        "emmet.excludeLanguages": [
+        
+            "markdown"
+        ]
+    }
