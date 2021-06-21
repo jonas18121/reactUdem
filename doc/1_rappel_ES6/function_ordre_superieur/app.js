@@ -4,7 +4,11 @@
 Une fonction d'ordre supérieur, est une fonction qui prend en argument une autre focntion 
 ou qui retourne une fonction 
 ou les 2 en même temps 
+
+une fonction callback est une fonction qui ce fait appelé par une autre fonction
 */
+
+
 
 // En procedurale
 console.log('En procedurale');
