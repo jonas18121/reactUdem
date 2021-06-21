@@ -1,6 +1,8 @@
 # Créer notre premier projet react
 
-on va utiliser l'outil `creact-react-app` () https://github.com/facebook/create-react-app ) pour créer notre premiére appli
+github : https://github.com/facebook/create-react-app
+
+on va utiliser l'outil `creact-react-app` ( https://github.com/facebook/create-react-app ) pour créer notre premiére appli
 ça va télécharger des outils utile comme `webpack et babel`
 la librairie ` react, react-dom et react-scripts avec cra-template`
 
