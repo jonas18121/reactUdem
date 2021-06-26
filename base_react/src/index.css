@@ -1,0 +1,25 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #222;
+  color: #f1f1f1;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+img, video, table {
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
