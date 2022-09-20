@@ -1,3 +1,8 @@
+# Créer des listes
+
+### Dans App.js
+
+```js
 import { useState } from "react";
 
 function App() {
@@ -22,3 +27,4 @@ function App() {
 }
 
 export default App;
+```
