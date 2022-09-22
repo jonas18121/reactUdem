@@ -32,3 +32,11 @@ https://babeljs.io/
 
 Babel est un transpileur, il va prendre du javascrit nouvel génération à partir de 2015, ES6,
 et ça va aussi le rendre lisible par tous les navigateurs
+
+## Install Pluging
+
+Installer `ES7+ React/Redux/React-Native snippets` de `dsznajder` 
+
+comme ça on peut `rfc` dans VCode pour créer des composant fonction rapidement .
+
+Et `rcc` dans VCode pour créer des composant classe rapidement .
