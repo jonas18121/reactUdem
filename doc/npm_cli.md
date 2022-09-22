@@ -16,7 +16,11 @@
 
     > npm install react-redux
 
+## Installer Bootstrap
 
+```bash
+npm install bootstrap
+```
 
 
 
