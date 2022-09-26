@@ -22,7 +22,16 @@
 npm install bootstrap
 ```
 
+## Installer UUID
 
+```bash
+npm install uuid
+```
+ ou 
+
+```bash
+yarn add uuid
+```
 
 
 
