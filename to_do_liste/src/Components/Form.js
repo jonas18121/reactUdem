@@ -1,13 +1,25 @@
 import {useState} from 'react';
 import Item from './Item';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Form(){
 
     const [dataArr, setDataArr] = useState([
-        {txt: "Promener le chat"},
-        {txt: "Promener le chien"},
-        {txt: "Promener le boeuf"},
+        {txt: "Promener le chat", id: uuidv4()},
+        {txt: "Promener le chien", id: uuidv4()},
+        {txt: "Promener le boeuf", id: uuidv4()},
     ]);
+
+    const deleteElement = id => {
+        // Ici on utilise filter pour retourner tous les éléments qui ont un id différent
+        // de celui que l'on a selectionné pour le supprimer
+        const filteredState = dataArr.filter(item => {
+            return item.id !== id;
+        });
+
+        // setDataArr pour mettre le state à jour
+        setDataArr(filteredState);
+    }
 
     return (
         <div className="m-auto px4 col-12 col-sm-10 col-lg_6">
@@ -21,10 +33,14 @@ export default function Form(){
             <ul className="list-group">
                 {
                     dataArr.map((item, index) => {
+
+                        // On ne va pas utiliser index dans la key car il n'est pas très fiable
                         return (
                             <Item 
                                 txt={item.txt}
-                                key={index}
+                                key={item.id}
+                                id={item.id}
+                                delFunc={deleteElement}
                             />
                         );
                     })
