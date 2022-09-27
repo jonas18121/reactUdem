@@ -68,7 +68,7 @@ export default function Form(){
                 <label htmlFor="todo" className="form-label mt-3">Chose à faire</label>
                 <input 
                     value={stateInput} // Lier le state stateInput à la valeur de l'input
-                    onInput={ e => linkedInput(e.target.value) }// lorsqu'on qu'on écrit dans l'input, on appel la methode linkedInput en lui passant les valeurs grace à l'évènnement e 
+                    onInput={ e => linkedInput(e.target.value) }// lorsqu'on écrit dans l'input, on appel la methode linkedInput en lui passant les valeurs grace à l'évènnement e 
                     type="text" 
                     className="form-control" 
                     id='todo' 
