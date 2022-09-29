@@ -5,7 +5,7 @@ Dans `App.js`
 - On importe notre composant `Contenu.js`
 
 Dans `App.js`
-
+```js
     import React from 'react';
     import './App.css';
     import Contenu from './Contenu';
@@ -21,7 +21,7 @@ Dans `App.js`
     }
 
     export default App;
-
+```
 
 Dans `Contenu.js`
 
@@ -38,7 +38,7 @@ Dans `Contenu.js`
 - Puis pour tester, on crée un boutton pour ajouter `+ 1` et l'autre pour retirer `- 1`, avec leurs fonctions respectif
 
 Dans `Contenu.js`
-
+```js
     import React, { useState }  from 'react'
 
     export default function Contenu() {
@@ -64,3 +64,4 @@ Dans `Contenu.js`
             </div>
         )
     }
+```js

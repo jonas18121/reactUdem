@@ -10,13 +10,16 @@ Dans `Contenu.js`
 
     - Le piège c'est que si on met `setMonState(monState + 1 )` dans cette fonction, ça va faire une boucle infini'
 
-- `useEffect(() => {}, [])` Avec un tableau vide en 2èmes paramètres, c\'est comme un `componentDidMount()`
+- `useEffect(() => {}, [])` Avec un tableau vide en 2èmes paramètres, c\'est comme un `componentDidMount()`, 
+    - on va executer useEffect lors du 1er affichage, Donc lorsque le composant va ce monter
+    - Très utile si on veut appeler une api
 
 - `useEffect(() => {}, [monState])` Avec une le state dans le tableau en 2èmes paramètres, c\'est comme un `componentDidUpdate()`, et pas de boucle infini
+    - On surveille le state `monState`, donc on appel useEffect lors du 1er affichage, puis a chaque fois que la valeur de `monState` change
 
 
 Dans `Contenu.js`
-
+```js
     import React, { useState, useEffect }  from 'react'
 
     export default function Contenu() {
@@ -33,7 +36,7 @@ Dans `Contenu.js`
 
         useEffect(() => {
             console.log('composant affiché, sans 2èmes paramètres');
-            console.log('Le piège c'est que si on met setMonState(monState + 1 ) dans cette fonction, ça va faire une boucle infini');
+            console.log("Le piège c'est que si on met setMonState(monState + 1 ) dans cette fonction, ça va faire une boucle infini");
         });
 
         useEffect(() => {
@@ -56,3 +59,4 @@ Dans `Contenu.js`
             </div>
         )
     }
+```
