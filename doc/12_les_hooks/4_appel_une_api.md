@@ -18,7 +18,7 @@ Dans `Contenu.js`
     - `const data = await reponse.json();`
 
 
-- On met le résultat de la constante data dans le state
+- On met le résultat de la constante `data` dans le state
 
     - `setDataImg(data[0].url);`
 
@@ -26,11 +26,9 @@ Dans `Contenu.js`
 
 - On affiche le state dans le render `<div> <img src={dataImg} /></div>`
 
-
-
 Dans `Contenu.js`
 
-
+```js
     import React, { useState, useEffect }  from 'react'
 
     export default function Contenu() {
@@ -51,13 +49,8 @@ Dans `Contenu.js`
         useEffect(() => {
 
             const fetchData = async () => {
-
                 const reponse = await fetch('https://api.thecatapi.com/v1/images/search');
-
                 const data = await reponse.json();
-
-                // console.log(data);
-
                 setDataImg(data[0].url);
             }
 
@@ -80,3 +73,38 @@ Dans `Contenu.js`
             </div>
         )
     }
+```
+### Ci-dessous on fait un appel à une API pareil que ci-dessus mais en utilisant then()
+```js
+import './App.css';
+import { useState, useEffect }  from 'react';
+
+function Contenu() {
+
+    const [dataImg, setDataImg] = useState();
+    const [dataId, setDataId] = useState();
+
+    useEffect(() => {
+        fetch('https://api.thecatapi.com/v1/images/search')
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            setDataImg(data[0].url);
+            setDataId(data[0].id);
+        });
+    }, []);
+
+    return (
+        <div className="App">
+            {/* 
+                Si dataImd exite, on affiche la balise img,
+                si non, on affiche rien 
+            */}
+            {dataImg && <img src={dataImg} alt={dataId} />}
+        </div>
+    );
+}
+
+export default App;
+```
