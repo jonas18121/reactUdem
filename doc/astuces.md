@@ -1,3 +1,15 @@
+
+
+### useEffect agit 2 fois, React.StrictMode en evironnement de dev
+
+React.StrictMode qui ce trouve dans index.js à la racine du project, doit être mis en commentaire car, il fait agir useEffect 2 fois, ce qui peut faussé la compréhension.
+
+En prod, React.StrictMode fait agir useEffect qu'une seule fois. donc on peut le dé-commenter pour l'environnement de prod.
+
+Dans `index.js`
+```js
+// index.js
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -13,8 +25,4 @@ root.render(
     <App />
   // </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+```
