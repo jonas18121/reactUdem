@@ -3,25 +3,24 @@ import { useState, useEffect }  from 'react'
 
 function App() {
 
-  const [dataImg, setDataImg] = useState();
-  const [dataId, setDataId] = useState();
+  const [timer, setTimer] = useState(0);
 
   useEffect(() => {
-    fetch('https://api.thecatapi.com/v1/images/search')
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-      setDataImg(data[0].url);
-      setDataId(data[0].id)
-    })
+    
+    // on récupère l'id de setInterval 
+    const intervalId = setInterval(() => {
+      setTimer(timer => timer + 1)
+    }, 1000);
+
+    return () => {
+      // on utilise clearInterval pour nettoyé grace a l'id contenu dans intervalId
+      clearInterval(intervalId);
+    }
   }, []);
 
   return (
     <div className="App">
-      {/* Si dataImd exite, on affiche la balise img */}
-      {dataImg && <img src={dataImg} alt={dataId} />}
+      <h1>{timer}</h1>
     </div>
   );
 }

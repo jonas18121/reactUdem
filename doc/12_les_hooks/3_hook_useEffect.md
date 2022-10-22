@@ -60,3 +60,49 @@ Dans `Contenu.js`
         )
     }
 ```
+
+## Autres exemple avec un clean up
+
+Dans `App.js`
+
+- En utilisant une fonction callback dans setTimer `timer => timer + 1`, 
+
+  `useState` va comprendre qu'il faut utilisé la constante `timer` avec les nouvelles données qui on été ajouter en argument de la fonction callback dans setTimer.
+
+- Le `return` dans le useEffect va représenter une clean up fonction, pour faire du nettoyage lorsque le composant va ce détruit, comme ça on libère de la mémoire.
+
+Et ça évitera que le project devienne lent.
+
+Pour clear un intervale en JS on utilise `clearInterval`
+
+```js
+import './App.css';
+import { useState, useEffect }  from 'react'
+
+function App() {
+
+  const [timer, setTimer] = useState(0);
+
+  useEffect(() => {
+    
+    // on récupère l'id de ce setInterval 
+    const intervalId = setInterval(() => {
+      setTimer(timer => timer + 1);
+    }, 1000);
+
+    return () => {
+      // on utilise clearInterval pour nettoyé setInterval de la mémoire du project grace a l'id contenu dans intervalId
+      clearInterval(intervalId);
+    }
+  }, []);
+
+  return (
+    <div className="App">
+      <h1>{timer}</h1>
+    </div>
+  );
+}
+
+export default App;
+
+```
