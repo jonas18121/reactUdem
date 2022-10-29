@@ -30,7 +30,7 @@ Dans `App.js`
 
 - Le `return` dans le useEffect va représenter une clean up fonction, pour faire du nettoyage lorsque le composant va ce détruit, comme ça on libère de la mémoire.
 
-Et ça évitera que le project devienne lent.
+Et ça évitera que le project devienne lent. (On évite des problèmes de mémoire)
 
 Pour clear un intervale en JS on utilise `clearInterval`
 
