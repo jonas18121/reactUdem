@@ -1,7 +1,7 @@
 # La destruction d'un composant
 
-#### Le cycle de vie des composant
-- Un composant va naitre, lorsque l'on vu l'afficher quelques part
+#### Le cycle de vie des composants
+- Un composant va naitre, lorsque l'on veut l'afficher quelques part
 - Le composant va se mettre à jour lorsque le state va ce mettre à jour
 - Le composant va se détruire, lorsqu'on va le cacher avec un rendu conditionnel ou si on supprime le composant (changer de page)
 
@@ -47,7 +47,7 @@ function Timer() {
   const [timer, setTimer] = useState(0);
 
   useEffect(() => {
-    alert('Le Composant Est Construit'); // Le Composant Est Construit lors de ça naissance
+    alert('Le Composant Est Construit'); // Le Composant Est Construit lors de sa naissance
     
     // on récupère l'id de setInterval 
     const intervalId = setInterval(() => {
