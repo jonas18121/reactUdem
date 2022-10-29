@@ -1,26 +1,20 @@
 import './App.css';
-import { useState, useEffect }  from 'react'
+import { useState }  from 'react';
+import Timer from './Timer';
 
 function App() {
 
-  const [timer, setTimer] = useState(0);
+  const [toggle, setToggle] = useState(false);
 
-  useEffect(() => {
-    
-    // on récupère l'id de setInterval 
-    const intervalId = setInterval(() => {
-      setTimer(timer => timer + 1)
-    }, 1000);
 
-    return () => {
-      // on utilise clearInterval pour nettoyé grace a l'id contenu dans intervalId
-      clearInterval(intervalId);
-    }
-  }, []);
+  const toggleFunc = () => {
+    setToggle(!toggle);
+  }
 
   return (
     <div className="App">
-      <h1>{timer}</h1>
+      <button onClick={toggleFunc}>Toggle</button>
+      { toggle && <Timer /> }
     </div>
   );
 }
