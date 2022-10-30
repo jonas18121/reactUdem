@@ -1,4 +1,4 @@
-import { useState, useEffect }  from 'react'
+import { useState, useEffect, Fragment }  from 'react'
 
 function Timer() {
 
@@ -21,9 +21,9 @@ function Timer() {
   }, []);
 
   return (
-    <div className="Timer">
+    <Fragment>
       <h1>{timer}</h1>
-    </div>
+    </Fragment>
   );
 }
 
