@@ -153,3 +153,89 @@ h1 {
   border-radius: 50%;
 }
 ```
+
+## Exemple 3 : Selectionné plusieurs éléments avec useRef()
+
+- Ici, on va vouloir Selectionné plusieurs éléments video avec useRef() 
+- On déclare un tableau vide dans `useRef` : `const ref = useRef([]);`
+- On importe 3 videos
+- On crée une fonction `addToRef` que l'on va mettre dans chaque attribut `ref` des balises `<video>`
+  - ça va nous permettre de sélectionné chaque vidéo
+- Avec `useEffect` on va logger la constante `ref` pour voir ce qu'il contient
+
+```js
+// App.js
+import './App.css';
+import { useState, useEffect, useRef }  from 'react';
+import Video_plage_1 from './assets/video/plage.mp4';
+import Video_plage_2 from './assets/video/plage.mp4';
+import Video_plage_3 from './assets/video/plage.mp4';
+
+function App() {
+
+  const [toggle, setToggle] = useState(false);
+
+  const ref = useRef([]);
+
+  
+  useEffect(() => {
+    console.log(ref); // retour : {current: Array(3)}
+    console.log(ref.current); // retour : (3) [video, video, video]
+  }, []);
+
+  const toggleFunc = () => {
+    setToggle(!toggle);
+  }
+
+  const addToRef = el => {
+    console.log(el); // retour : <video width="100%" height="500" autoplay="" controls=""><source src="/static/media/plage.fe9be66cf431f1036c97.mp4" type="video/mp4"></video>
+
+    // si l'élément existe et n'est pas inclus dans le tableau de useRef, on le push
+    if (el && !ref.current.includes(el)) {
+      ref.current.push(el);
+    }
+  }
+
+  return (
+    <div className="App">
+
+      <video 
+        ref={addToRef}
+        width="100%" 
+        height="500"
+        autoPlay
+        controls
+        muted
+      >
+        <source src={Video_plage_1} type='video/mp4' />
+      </video>
+
+      <video 
+        ref={addToRef}
+        width="100%" 
+        height="500"
+        autoPlay
+        controls
+        muted
+      >
+        <source src={Video_plage_2} type='video/mp4' />
+      </video>
+
+      <video 
+        ref={addToRef}
+        width="100%" 
+        height="500"
+        autoPlay
+        controls
+        muted
+      >
+        <source src={Video_plage_3} type='video/mp4' />
+      </video>
+
+      <button onClick={toggleFunc}>Toggle</button>
+    </div>
+  );
+}
+
+export default App;
+```

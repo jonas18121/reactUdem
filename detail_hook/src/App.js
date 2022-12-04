@@ -1,80 +1,73 @@
 import './App.css';
-import { useRef }  from 'react';
-
+import { useState, useEffect, useRef }  from 'react';
+import Video_plage_1 from './assets/video/plage.mp4';
+import Video_plage_2 from './assets/video/plage.mp4';
+import Video_plage_3 from './assets/video/plage.mp4';
 
 function App() {
 
+  const [toggle, setToggle] = useState(false);
 
+  const ref = useRef([]);
 
-  const cursorRef = useRef(null);
+  
+  useEffect(() => {
+    console.log(ref);
+    console.log(ref.current);
+  }, []);
 
-
-  /**
-   *  mousePos permet d'avoir accès a cursorRef.current a chaque que la souris bouge
-   * via onMouseMove
-   */
-  const mousePos = e => {
-    console.log(cursorRef.current);
-
-    // Il faut mettre - 20 a e.pageY et e.pageY pour que la souris soit bien au milieu de la div re-construit
-    cursorRef.current.setAttribute('style', `top:${e.pageY - 20}px; left:${e.pageX - 20}px;`);
-
+  const toggleFunc = () => {
+    setToggle(!toggle);
   }
 
+  const addToRef = el => {
+    console.log(el);
+
+
+    if (el && !ref.current.includes(el)) {
+      ref.current.push(el);
+    }
+  }
 
   return (
-    <div onMouseMove={mousePos} className="App">
+    <div className="App">
 
-      <div 
-        ref={cursorRef} 
-        className="cursor-custom"
-      ></div>
+      <video 
+        ref={addToRef}
+        width="100%" 
+        height="500"
+        autoPlay
+        controls
+        muted
+      >
+        <source src={Video_plage_1} type='video/mp4' />
+      </video>
 
-      <h1>Lorem ipsum</h1>
+      <video 
+        ref={addToRef}
+        width="100%" 
+        height="500"
+        autoPlay
+        controls
+        muted
+      >
+        <source src={Video_plage_2} type='video/mp4' />
+      </video>
+
+      <video 
+        ref={addToRef}
+        width="100%" 
+        height="500"
+        autoPlay
+        controls
+        muted
+      >
+        <source src={Video_plage_3} type='video/mp4' />
+      </video>
+
+      <button onClick={toggleFunc}>Toggle</button>
     </div>
   );
 }
 
 export default App;
-
-// function App() {
-
-//   const [toggle, setToggle] = useState(false);
-
-//   const ref = useRef(null);
-
-  
-//   useEffect(() => {
-//     console.log(ref);
-//     console.log(ref.current);
-
-//     setTimeout(() => {
-//       ref.current.pause();
-//     }, 5000);
-
-//   }, []);
-
-//   const toggleFunc = () => {
-//     setToggle(!toggle);
-//   }
-
-//   return (
-//     <div className="App">
-
-//       <video 
-//         ref={ref}
-//         width="100%" 
-//         height="500"
-//         autoPlay
-//         controls
-//         muted
-//       >
-//         <source src={Video_plage} type='video/mp4' />
-//       </video>
-
-//       <button onClick={toggleFunc}>Toggle</button>
-//     </div>
-//   );
-// }
-
-// export default App;
