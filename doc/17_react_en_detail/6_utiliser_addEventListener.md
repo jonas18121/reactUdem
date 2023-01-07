@@ -1,3 +1,25 @@
+# Utiliser addEventListener
+
+Site : 
+- [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- [Liste des évènements](https://developer.mozilla.org/en-US/docs/Web/Events#event_listing)
+- [évènement resize](https://developer.mozilla.org/en-US/docs/Web/API/PictureInPictureWindow/resize_event)
+
+Dans ReactJS, on peut facilement géré les évènements depuis le JSX avec `onClick` par exemple.
+
+Par contre si on veut écouté les évènements depuis [window](https://developer.mozilla.org/en-US/docs/Web/API/Window) ou [document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+
+On sera obliger d'utiliser [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+
+
+Dans le `UseEffect` de `App.js`
+
+- On crée un écouteur d'évènement pour agir lorsque qu'on redimensionne l'écran
+- La fonction actionResize est appeler dans l'écouteur d'évènement
+- On crée une clean up fonction pour supprimer addEventListener lorsque le composant ce détruit
+```JS
+// App.js
+
 import './App.css';
 import { useState, useEffect, useRef }  from 'react';
 import Video_plage_1 from './assets/video/plage.mp4';
@@ -82,3 +104,4 @@ function App() {
 }
 
 export default App;
+```
